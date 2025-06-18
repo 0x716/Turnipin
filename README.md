@@ -43,68 +43,68 @@ frontend/
 
 ---
 
-## 📅 1 週開發計畫（Turnipin Plagiarism Checker）
+## 📅 1-Week Development Plan (Turnipin Plagiarism Checker)
 
-### Day 1：專案初始化
-- [x] 建立 GitHub 倉庫與 README 說明
-- [x] 建立 frontend / backend 基本目錄結構
-- [x] 設定 sqlc.yaml，產生 query code
-- [x] 建立 schema.sql 與 query.sql
-- [ ] 初始化 config 模組（使用 Viper）
-- [ ] 撰寫 repository 層與 model interface
-
----
-
-### Day 2：文字處理模組
-- [ ] 撰寫 PDF / Word 文字提取（extractor）
-- [ ] 撰寫文本清洗與 Token 化（preprocessor）
-- [ ] 撰寫 N-Gram 擷取與 Shingle 工具
-- [ ] 撰寫 Levenshtein 相似度計算模組
-- [ ] 撰寫對應單元測試
+### Day 1: Project Initialization
+- [x] Create GitHub repository and README description
+- [x] Setup basic frontend/backend directory structure
+- [x] Configure `sqlc.yaml` and generate query code
+- [x] Create `schema.sql` and `query.sql`
+- [ ] Initialize config module (using Viper)
+- [ ] Implement repository layer and model interfaces
 
 ---
 
-### Day 3：資料上傳與儲存
-- [ ] 上傳 API（/api/reference/upload、/api/check/upload）
-- [ ] 提取文字 → 擷取 Shingle → 儲存 DB
-- [ ] 儲存原始檔案（PDF/Word）至 `files/` 資料夾
-- [ ] 回傳 JSON 資訊含 ID、狀態、檔名等
+### Day 2: Text Processing Module
+- [ ] Develop PDF / Word text extraction (extractor)
+- [ ] Implement text cleaning and tokenization (preprocessor)
+- [ ] Create N-Gram extraction and shingle utilities
+- [ ] Write Levenshtein similarity calculation module
+- [ ] Write corresponding unit tests
 
 ---
 
-### Day 4：比對與報告產生
-- [ ] 比對主流程服務邏輯
-- [ ] Jaccard + Levenshtein 混合比對邏輯
-- [ ] 報告格式整理並提供 `/api/check/report/{id}`
-- [ ] 檢查與參考資料的段落精比對與高亮資訊
+### Day 3: File Upload and Storage
+- [ ] Implement upload APIs (`/api/reference/upload`, `/api/check/upload`)
+- [ ] Extract text → generate shingles → store in DB
+- [ ] Save original files (PDF/Word) to `files/` directory
+- [ ] Return JSON info including ID, status, filename, etc.
 
 ---
 
-### Day 5：登入系統與權限保護
-- [ ] 單一使用者登入功能（JWT 驗證）
-- [ ] 前端登入頁與 localStorage 儲存 Token
-- [ ] Middleware 驗證 Token 是否存在
+### Day 4: Comparison and Report Generation
+- [ ] Implement main comparison service logic
+- [ ] Develop combined Jaccard + Levenshtein matching logic
+- [ ] Format reports and provide `/api/check/report/{id}`
+- [ ] Highlight precise matching segments with reference texts
 
 ---
 
-### Day 6：前端 UI 開發（Svelte + Tailwind）
-- [ ] 首頁：參考資料列表、上傳區塊、查看原始檔案
-- [ ] 查重頁：上傳檔案區、提交按鈕、進度條
-- [ ] 報告頁：比對結果展示、高亮段落顯示
-- [ ] 加入介面提示與 Loading 狀態
+### Day 5: Login System and Access Control
+- [ ] Single-user login functionality (JWT authentication)
+- [ ] Frontend login page and localStorage token storage
+- [ ] Middleware to verify token presence on requests
 
 ---
 
-### Day 7：整合測試與打包
-- [ ] 撰寫 integration 測試流程
-- [ ] 處理錯誤回傳與 API 整合問題
-- [ ] 完整打包：Go build + 前端 Vite build
-- [ ] 準備最終 USB friendly 部署版本（含 SQLite + 檔案資料夾）
+### Day 6: Frontend UI Development (Svelte + Tailwind)
+- [ ] Homepage: list reference documents, upload sections, file preview
+- [ ] Plagiarism check page: upload area, submit button, progress bar
+- [ ] Report page: display comparison results with highlighted segments
+- [ ] Add UI feedback and loading states
+
+---
+
+### Day 7: Integration Testing and Packaging
+- [ ] Write integration test cases covering the entire flow
+- [ ] Handle error responses and API integration issues
+- [ ] Complete build: Go backend + frontend Vite build
+- [ ] Prepare final USB-friendly deployment package (including SQLite + file folders)
 
 ---
 
 ## 📄 License
 
-本專案採用 [MIT License](./LICENSE) 授權。
+This project is licensed under the [MIT License](./LICENSE).
 
-© 2025 林均 保留所有權利。
+© 2025 Jun Lin. All rights reserved.
