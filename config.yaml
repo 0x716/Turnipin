@@ -1,0 +1,17 @@
+app:
+  host: localhost
+  port: 7160
+  name: turnipin
+
+url:
+  root: /api
+
+database:
+  title: sqlite3
+  name: turnipin.db
+  engine: sqlite
+
+# development:
+#   - mode: debug | release | test
+development:
+  mode: debug
